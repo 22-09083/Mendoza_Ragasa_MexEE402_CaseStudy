@@ -26,19 +26,20 @@ Batangas State University, Alangilan Campus
 
 ## What we learned
 
-Ch1_2_3 
+## Chapter 1, 2, and 3 
 
-Ch4
+## Chapter 4
 
-Ch5
+## Chapter 5
 
-Ch6
+## Chapter 6
 
-Ch7
+## Chapter 7
 
-Ch8
+## Chapter 8
 
-Ch9. Say what the chapter taught
+## Chapter 9
+Say what the chapter taught
 you and what surprised you. Not what the library does, but what you understood.
 
 ## Errors we found
