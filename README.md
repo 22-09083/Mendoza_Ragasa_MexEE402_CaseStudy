@@ -10,7 +10,7 @@ Batangas State University, Alangilan Campus
 | Name | Student Number | Section |
 |---|---|---|
 | Mendoza, Jose Roart B. | 22-09083 |MEXE-4103|
-| Surname, First Name | | |
+| Ragasa, Crist Gerrecho C. | 22-03893 | MEXE-4103 |
 
 ## Notebook links
 
