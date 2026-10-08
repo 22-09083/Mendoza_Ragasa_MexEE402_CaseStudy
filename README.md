@@ -14,15 +14,15 @@ Batangas State University, Alangilan Campus
 
 ## Notebook links
 
-| Chapter | Member 1 | Member 2 |
+| Chapter | Mendoza, Jose Roart B. | Ragasa, Crist Gerrecho C. |
 |---|---|---|
-| Ch1_2_3 | [link]() | [link]() |
-| Ch4 | [link]() | [link]() |
-| Ch5 | [link]() | [link]() |
-| Ch6 | [link]() | [link]() |
-| Ch7 | [link]() | [link]() |
-| Ch8 | [link]() | [link]() |
-| Ch9 | [link]() | [link]() |
+| Ch1_2_3 | [link]() | [link](https://colab.research.google.com/drive/1h5qRqP2yVq7q_DGqXVYgt1aJmOTUTczf?usp=sharing) |
+| Ch4 | [link]() | [link](https://colab.research.google.com/drive/1QSX6iYJk8a7quBz4MGfgpx-kLPDpae0D?usp=sharing) |
+| Ch5 | [link]() | [link](https://colab.research.google.com/drive/14vB2TWBp3Zk61nS5o-yRDiqW-qzl-ODo?usp=sharing) |
+| Ch6 | [link]() | [link](https://colab.research.google.com/drive/1blHDR_yFSLyD2S_Hn1qL6K0yiiPAuLEw?usp=sharing) |
+| Ch7 | [link]() | [link](https://colab.research.google.com/drive/1B6-g_BiS0bvyHn5hucWI73BnBePJUIJ3?usp=sharing) |
+| Ch8 | [link]() | [link](https://colab.research.google.com/drive/1cSWifZgEdwL914489O6Z5CmYB6iP7R3U?usp=sharing) |
+| Ch9 | [link]() | [link](https://colab.research.google.com/drive/1Jhnwlj-WBdsSEHvH6Mx3joLiFlQmb2QV?usp=sharing) |
 
 ## What we learned
 
