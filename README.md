@@ -16,13 +16,13 @@ Batangas State University, Alangilan Campus
 
 | Chapter | Mendoza, Jose Roart B. | Ragasa, Crist Gerrecho C. |
 |---|---|---|
-| Ch1_2_3 | [link]() | [Ch1_2_3](https://colab.research.google.com/drive/1h5qRqP2yVq7q_DGqXVYgt1aJmOTUTczf?usp=sharing) |
-| Ch4 | [link]() | [Ch4](https://colab.research.google.com/drive/1QSX6iYJk8a7quBz4MGfgpx-kLPDpae0D?usp=sharing) |
-| Ch5 | [link]() | [Ch5](https://colab.research.google.com/drive/14vB2TWBp3Zk61nS5o-yRDiqW-qzl-ODo?usp=sharing) |
-| Ch6 | [link]() | [Ch6](https://colab.research.google.com/drive/1blHDR_yFSLyD2S_Hn1qL6K0yiiPAuLEw?usp=sharing) |
-| Ch7 | [link]() | [Ch7](https://colab.research.google.com/drive/1B6-g_BiS0bvyHn5hucWI73BnBePJUIJ3?usp=sharing) |
-| Ch8 | [link]() | [Ch8](https://colab.research.google.com/drive/1cSWifZgEdwL914489O6Z5CmYB6iP7R3U?usp=sharing) |
-| Ch9 | [link]() | [Ch9](https://colab.research.google.com/drive/1Jhnwlj-WBdsSEHvH6Mx3joLiFlQmb2QV?usp=sharing) |
+| Ch1_2_3 |  | [Ch1_2_3](https://colab.research.google.com/drive/1h5qRqP2yVq7q_DGqXVYgt1aJmOTUTczf?usp=sharing) |
+| Ch4 |  | [Ch4](https://colab.research.google.com/drive/1QSX6iYJk8a7quBz4MGfgpx-kLPDpae0D?usp=sharing) |
+| Ch5 |  | [Ch5](https://colab.research.google.com/drive/14vB2TWBp3Zk61nS5o-yRDiqW-qzl-ODo?usp=sharing) |
+| Ch6 |  | [Ch6](https://colab.research.google.com/drive/1blHDR_yFSLyD2S_Hn1qL6K0yiiPAuLEw?usp=sharing) |
+| Ch7 |  | [Ch7](https://colab.research.google.com/drive/1B6-g_BiS0bvyHn5hucWI73BnBePJUIJ3?usp=sharing) |
+| Ch8 |  | [Ch8](https://colab.research.google.com/drive/1cSWifZgEdwL914489O6Z5CmYB6iP7R3U?usp=sharing) |
+| Ch9 |  | [Ch9](https://colab.research.google.com/drive/1Jhnwlj-WBdsSEHvH6Mx3joLiFlQmb2QV?usp=sharing) |
 
 ## What we learned
 
