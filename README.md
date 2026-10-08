@@ -9,7 +9,7 @@ Batangas State University, Alangilan Campus
 
 | Name | Student Number | Section |
 |---|---|---|
-| Mendoza, Jose Roart B. | 22-09083|MEXE-4103|
+| Mendoza, Jose Roart B. | 22-09083 |MEXE-4103|
 | Surname, First Name | | |
 
 ## Notebook links
