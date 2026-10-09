@@ -26,8 +26,7 @@ Batangas State University, Alangilan Campus
 
 ## What we learned
 
-## ⬤ Chapter 1, 2, and 3 
-From Chapters 1–3, we learned that preparing data properly is an important step before using a machine-learning model. We also learned how to inspect and clean datasets, handle missing values, identify outliers, select useful features, and organize preprocessing steps using pipelines. These processes help make the data more consistent and reliable so the ML model can produce better results.
+## ⬤ Ch1_2_3: I understood that raw datasets are inherently messy, missing values, and contain irrelevant noise, making preprocessing an essential first step before feeding data into a machine learning model. Using initial inspection methods like dtypes, head(), info(), and describe() gives a clear overview of the data's structural integrity. What surprised me most was how much summary statistics can be distorted by extreme outliers (like games with global sales over 40 million), showing how sensitive measures like mean and standard deviation are to uncleaned data.
 
 ## ⬤ Chapter 4
 In Chapter 4, we learned that feature engineering involves creating or transforming features to make the data more useful for a machine-learning model. We learned how to create new features, group numerical values through binning, create interaction features, and convert categorical data using one-hot and ordinal encoding. These techniques can help the model identify useful patterns in the data.
