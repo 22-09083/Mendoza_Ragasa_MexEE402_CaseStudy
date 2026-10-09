@@ -49,7 +49,7 @@ Chapter 9 continues from Chapter 8 in which we focus on preparing numerical and 
 
 ## Errors we found
 
-The errors we found were mostly due to hanging codes from unchecked coding such as missing files and incorrect linking. Although we did see a few errors that are also incorrect linking and absent variables in a few tables. We changes those codes so that we are able to manipulate and display the warranted data from this case study.
+The errors we found were mostly due to hanging codes from unchecked coding such as missing files and incorrect linking. Although the most significant error we found was the table value for Chapter 6. Supposedly, the value for 100 is to show in the outlier section of the code, but due to the original value being 3, it was included in the count, so instinctively, the code did not see it as an "outlier" in this case. For this problem, we changed the value of 3 to 1 so that the value for 100 can be listed as an outlier.
 
 ## Note on AI tools
 
