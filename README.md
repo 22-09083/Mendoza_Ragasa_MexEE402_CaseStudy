@@ -53,35 +53,35 @@ Errors We Found
 Deprecation Warning with Chained inplace=True Assignment (Chapter 3)
 
 Notebook Error:
-df['Year'].fillna(df['Year'].mean(), inplace=True)
-df['Publisher'].fillna(df['Publisher'].mode()[0], inplace=True)
+**df['Year'].fillna(df['Year'].mean(), inplace=True)**
+**df['Publisher'].fillna(df['Publisher'].mode()[0], inplace=True)**
 Issue: Triggered a FutureWarning because calling .fillna(..., inplace=True) on a single DataFrame column via chained indexing (df[col]) is deprecated in Pandas and will fail in Pandas 3.0+.
 
 Corrected Version: Reassign the column directly without inplace=True:
 
 Python
-df['Year'] = df['Year'].fillna(df['Year'].mean())
-df['Publisher'] = df['Publisher'].fillna(df['Publisher'].mode()[0])
-R² Score Warning on Small CV Folds in RFECV (Chapter 7)
+**df['Year'] = df['Year'].fillna(df['Year'].mean())**
+**df['Publisher'] = df['Publisher'].fillna(df['Publisher'].mode()[0])**
+**R² Score Warning** on Small CV Folds in RFECV (Chapter 7)
 
 Notebook Error:
-selector = RFECV(estimator, step=1, cv=5) applied to df_2 (which only contains 7 sample rows).
+**selector = RFECV(estimator, step=1, cv=5) applied to df_2 (which only contains 7 sample rows).**
 Issue: Splitting 7 samples across 5 cross-validation folds leaves folds with only 1 test sample, raising an UndefinedMetricWarning: R^2 score is not well-defined with less than two samples.
 
 Corrected Version: Adjust the cross-validation splits to match small sample sizes, or use a smaller cv fold count:
 
 Python
-selector = RFECV(estimator, step=1, cv=2)
+**selector = RFECV(estimator, step=1, cv=2)**
 Missing Category Visual Mapping Bug in Discretization Plot (Chapter 9)
 
 Notebook Error:
-plt.hist(titanic_preprocessed[:,2], alpha=0.5, label='After discretization')
+**plt.hist(titanic_preprocessed[:,2], alpha=0.5, label='After discretization')**
 Issue: Column index 2 in titanic_preprocessed points to the One-Hot encoded Embarked_C binary column, not the discretized Age column. Passing index 2 plotted 0s and 1s rather than the discretized age categories.
 
 Corrected Version: Plot the discretized Age categorical column directly from the underlying DataFrame:
 
 Python
-plt.hist(data['Age'].astype(str), alpha=0.5, label='After discretization')
+**plt.hist(data['Age'].astype(str), alpha=0.5, label='After discretization')**
 
 ## Note on AI tools
 
