@@ -26,35 +26,79 @@ Batangas State University, Alangilan Campus
 
 ## What we learned
 
-## ⬤ Ch1_2_3: I understood that raw datasets are inherently messy, missing values, and contain irrelevant noise, making preprocessing an essential first step before feeding data into a machine learning model. Using initial inspection methods like dtypes, head(), info(), and describe() gives a clear overview of the data's structural integrity. What surprised me most was how much summary statistics can be distorted by extreme outliers (like games with global sales over 40 million), showing how sensitive measures like mean and standard deviation are to uncleaned data.
+## ⬤ Ch1_2_3
+We understood that raw datasets are inherently messy, miss values, and contain irrelevant noise, making preprocessing an essential first step before feeding data into a machine learning model. Using initial inspection methods like dtypes, head(), info(), and describe() gives a clear overview of the data's structural integrity. What surprised us most was how much summary statistics can be distorted by extreme outliers (like games with global sales over 40 million), showing how sensitive measures like mean and standard deviation are to uncleaned data.
 
-## ⬤ Chapter 4
-In Chapter 4, we learned that feature engineering involves creating or transforming features to make the data more useful for a machine-learning model. We learned how to create new features, group numerical values through binning, create interaction features, and convert categorical data using one-hot and ordinal encoding. These techniques can help the model identify useful patterns in the data.
+## ⬤ Ch4
+We learned how feature engineering transforms raw attributes into more informative variables using binning, interaction terms, and non-linear polynomial features. It also made clear the distinct roles of One-Hot Encoding for nominal variables and Ordinal Encoding for ranked variables. What surprised us was that using Ordinal Encoding on nominal categories without natural ordering (like weather types) accidentally forces an artificial mathematical hierarchy onto a model, leading it to misinterpret neutral categories as magnitudes.
 
-## ⬤ Chapter 5
-Chapter 5 focuses on data scaling, which is used to put different features on a similar numerical scale before using them in a machine-learning model. We learned that StandardScaler changes the mean to 0 and standard deviation to 1, while MinMaxScaler changes values to a range of 0 to 1. The main purpose is to prevent features with larger numbers from having more influence on the model just because of their scale. We also learned that scaling is not always necessary and depends on the data and the machine-learning algorithm being used.
+## ⬤ Ch5
+We understood that machine learning algorithms relying on distance calculations or gradient updates get severely biased when features exist on vastly different numerical scales. Rescaling features using StandardScaler (centering at mean=0, std=1) or MinMaxScaler (scaling within 0 to 1) levels the playing field so larger numbers don't dominate model behavior. What surprised us was learning that not all algorithms require scaling—tree-based models (like Decision Trees or Random Forests) are completely unaffected by feature scale because they split nodes based on relative threshold cutoffs.
 
-## ⬤ Chapter 6
-During coding through Chapter 6, we recognized that it focuses on identifying and handling outliers in a dataset. We learned that outliers are values that are significantly different from most of the other data and can affect the performance of a machine-learning model. The Z-score and IQR methods can be used to detect these unusual values. After finding an outlier, it can either be adjusted using capping or flooring, or removed if it is caused by an error or is not useful for the analysis.
+## ⬤ Ch6
+We learned how to systematically identify anomalous data points using statistical dispersion methods like Z-scores ($\pm 3\sigma$) and the Interquartile Range (IQR) fences. Handling outliers isn't strictly about deleting rows; alternative approaches like Winsorizing (capping/flooring) or log transformations preserve useful information while mitigating extreme values. What surprised us was how sensitive the Z-score calculation itself is to extreme outliers, as a massive outlier inflates both the mean and standard deviation, sometimes masking its own Z-score relative to the standard threshold cutoff.
 
-## ⬤ Chapter 7
-Chapter 7 mainly checks on feature selection, which involves choosing the most useful features for a machine-learning model. We learned that selecting important features can make a model simpler, faster, and less likely to overfit. Different methods such as Filter, RFECV (Wrapper), and LassoCV (Embedded) can be used to determine which features are useful. This helps the model focus on the data that is most relevant to its predictions.
+## ⬤ Ch7
+We understood that having more features does not automatically create a better model, as redundant or irrelevant variables increase noise, slow down training, and cause overfitting. Comparing Filter methods (correlation thresholds), Wrapper methods (RFECV), and Embedded methods (Lasso L1 regularization) showed how feature subsets are selected differently depending on the technique. What surprised us was how each method selected a completely different set of features on the exact same dataset, proving that feature selection depends heavily on the model and evaluation criteria used.
 
-## ⬤ Chapter 8
-Chapter 8 then involves us with datasets and checks us on using preprocessing pipelines to organize and automate data preparation. Similar to a conveyor belt, the data passes through each preprocessing step in the correct order before being given to the machine-learning model. We learned how imputation can fill missing values and scaling can standardize features. We also learned how ColumnTransformer can apply specific preprocessing steps to selected columns, making the overall workflow more organized and consistent.
+## ⬤ Ch8
+We learned that building a Scikit-Learn Pipeline paired with a ColumnTransformer creates an automated, sequential assembly line for preprocessing raw data. This setup ensures that cleaning, imputation, and scaling are applied consistently across both training and test datasets. What surprised us was how easy it is to accidentally introduce data leakage into a workflow when preprocessing operations are executed manually prior to splitting datasets.
 
-## ⬤ Chapter 9
-Chapter 9 continues from Chapter 8 in which we focus on preparing numerical and categorical data before using it in a machine-learning model. We learned how to handle missing values differently depending on the type of feature, as well as how discretization can convert numerical values such as age into categories. We also used different plots to examine survival based on factors such as gender and passenger class. Overall, the chapter shows how proper preprocessing and visualization can help us better understand and prepare data for machine-learning analysis.
+## ⬤ Ch9
+We understood how to apply all fundamental preprocessing concepts to a complex real-world dataset like Titanic, managing mixed numerical and categorical features within a single unified pipeline. Combining automated column transformations with exploratory visualization confirmed that preprocessing drastically improves missing value counts and exposes clean survival trends. What surprised us was seeing how strong demographic patterns were (such as passenger class and embarkation port), proving that simple feature engineering and proper missing-data imputation directly surface predictive power.
 
 ## Errors we found
 
-The errors we found were mostly due to hanging codes from unchecked coding such as missing files and incorrect linking. Although the most significant error we found was the table value for Chapter 6. Supposedly, the value for 100 is to show in the outlier section of the code, but due to the original value of the z-values being 3, or in this case less than 3, it was included in the count. So instinctively, the code did not see it as an "outlier" in this case. For this problem, we changed the value of 3 to 1 so that the value for 100 can be listed as an outlier.
+Errors We Found
+Deprecation Warning with Chained inplace=True Assignment (Chapter 3)
+
+Notebook Error:
+df['Year'].fillna(df['Year'].mean(), inplace=True)
+df['Publisher'].fillna(df['Publisher'].mode()[0], inplace=True)
+Issue: Triggered a FutureWarning because calling .fillna(..., inplace=True) on a single DataFrame column via chained indexing (df[col]) is deprecated in Pandas and will fail in Pandas 3.0+.
+
+Corrected Version: Reassign the column directly without inplace=True:
+
+Python
+df['Year'] = df['Year'].fillna(df['Year'].mean())
+df['Publisher'] = df['Publisher'].fillna(df['Publisher'].mode()[0])
+R² Score Warning on Small CV Folds in RFECV (Chapter 7)
+
+Notebook Error:
+selector = RFECV(estimator, step=1, cv=5) applied to df_2 (which only contains 7 sample rows).
+Issue: Splitting 7 samples across 5 cross-validation folds leaves folds with only 1 test sample, raising an UndefinedMetricWarning: R^2 score is not well-defined with less than two samples.
+
+Corrected Version: Adjust the cross-validation splits to match small sample sizes, or use a smaller cv fold count:
+
+Python
+selector = RFECV(estimator, step=1, cv=2)
+Missing Category Visual Mapping Bug in Discretization Plot (Chapter 9)
+
+Notebook Error:
+plt.hist(titanic_preprocessed[:,2], alpha=0.5, label='After discretization')
+Issue: Column index 2 in titanic_preprocessed points to the One-Hot encoded Embarked_C binary column, not the discretized Age column. Passing index 2 plotted 0s and 1s rather than the discretized age categories.
+
+Corrected Version: Plot the discretized Age categorical column directly from the underlying DataFrame:
+
+Python
+plt.hist(data['Age'].astype(str), alpha=0.5, label='After discretization')
 
 ## Note on AI tools
 
-For AI assistance, we admit on using ChatGPT as a data broker for a few of these chapters due to confusing methods that are not so easily understandable and to help us dissect the process of how specific commands determine how the profiling and the display of the data we need shows throughout the whole coding process.
+We utilized Gemini (Google AI) and ChatGPT (OpenAI) as interactive AI collaborators and study assistants for this activity. Specifically, we used these AI tools to:
+
+Verify mathematical outputs and step-by-step code execution results across our notebooks.
+
+Interpret warning tracebacks and identify Pandas deprecation warnings in the original code.
+
+Brainstorm, format, and refine our written explanations, summary tables, and final report sections.
 
 ## References
 
-McKinney, W. (2021). Python for Data Analysis, 3rd ed. O'Reilly.
-VanderPlas, J. Python Data Science Handbook.
+McKinney, W. (2021). Python for Data Analysis, 3rd ed. O'Reilly Media.
+
+VanderPlas, J. (2016). Python Data Science Handbook: Essential Tools for Working with Data. O'Reilly Media.
+
+Scikit-Learn Developers. (2024). ColumnTransformer with Mixed Types. Scikit-Learn Documentation. https://scikit-learn.org/stable/auto_examples/compose/plot_column_transformer_mixed_types.html
+
+Pandas Development Team. (2024). What's new in version 2.2.0: Copy-on-Write and Inplace Deprecations. Pandas Documentation. https://pandas.pydata.org/docs/whatsnew/v2.2.0.html
